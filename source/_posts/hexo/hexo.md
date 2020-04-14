@@ -12,31 +12,53 @@ updated:2020/04/13
     系统        Win10
     编辑器      VSCode
     核心框架    hexo
-
+<!-- --------------------分割线-------------------- -->
 ## 二、开始搭建
 
 ### 安装 hexo
 ``` bash
 $ npm install -g hexo-cli
 ```
+
 ### 创建hexo工程
 在自己的工作区中新建一个工程文件夹，打开终端cmd进入到该工程的根目录，执行hexo初始化：
+![newProjectFolder.png](../../assets/hexo/newProjectFolder.png)
 ``` bash
-\vscode-workspace\linxgblog>$ hexo init
+\linxgblog>$ hexo init
 ```
-初始化会生成工程默认需要的目录结构，然后需要安装默认需要的依赖，并且安装 hexo-deployer-git 插件，提供便捷的部署hexo工程到git上的操作。
-``` bash
+初始化会生成工程默认需要的目录结构，然后需要安装默认需要的依赖；安装 hexo-deployer-git 插件，提供便捷的部署hexo工程到git上的操作。
+至此工程创建完成，本地运行一下试试。
+``` javascript
 $ npm i
 $ npm i hexo-deployer-git -S
+$
+$ hexo s  // hexo server
+// http://localhost:4000
 ```
+
 ### 创建git远程仓库
 每个git账号都可以白嫖一个用于展示个人博客的静态网站，且仓库名固定，如下图(图中的警告提示是因为我已经创建了)。
 ``` bash
 <git_username>.github.io
 ```
-![createRepository.png](../../assets/img/hexo/createRepository.png)
+![createRepository.png](../../assets/hexo/createRepository.png)
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+### 部署
+仓库创建完成后，得到仓库地址URL，修改配置文件 /_config.yml 相关的配置。
+``` yml
+deploy:
+    type: git
+    repo: <repository_url>  # git远程仓库地址
+    branch: <branch_name>  # 分支名，一般是master
+```
+![createRepository.png](../../assets/hexo/configDeploy.png)
+将工程推到git上。
+``` bash
+$ hexo clean
+$ hexo deploy
+```
+
+<!-- More info: [Writing](https://hexo.io/docs/writing.html)
 
 ### Run server
 
@@ -60,4 +82,4 @@ More info: [Generating](https://hexo.io/docs/generating.html)
 $ hexo deploy
 ```
 
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+More info: [Deployment](https://hexo.io/docs/one-command-deployment.html) -->
