@@ -1,5 +1,6 @@
 ---
 title: Hexo快速搭建github.io个人博客(2020/04/13更新)
+date: 2020-04-13 17:52:14
 tag: 开源
 ---
 updated:2020/04/13
@@ -25,7 +26,7 @@ $ npm install -g hexo-cli
 
 ### 创建hexo工程
 在自己的工作区中新建一个工程文件夹，打开终端cmd进入到该工程的根目录，执行hexo初始化：
-![newProjectFolder.png](../../assets/hexo/newProjectFolder.png)
+{% asset_img newProjectFolder.png newProjectFolder %}
 ``` bash
 \linxgblog>$ hexo init
 ```
@@ -44,7 +45,7 @@ $ hexo s  # hexo server
 ``` bash
 <git_username>.github.io
 ```
-![createRepository.png](../../assets/hexo/createRepository.png)
+{% asset_img createRepository.png createRepository %}
 
 ### 部署
 仓库创建完成后，得到仓库地址URL，修改配置文件 /_config.yml 相关的配置。
@@ -54,16 +55,16 @@ deploy:
     repo: <repository_url>  # git远程仓库地址
     branch: <branch_name>  # 分支名，一般是master
 ```
-![createRepository.png](../../assets/hexo/configDeploy.png)
+{% asset_img configDeploy.png configDeploy %}
 将工程推到git上。
 ``` bash
 $ hexo clean  # 清除缓存
 $ hexo deploy  # 部署
 ```
 我们会注意到，执行hexo的deploy部署命令推到git上时，目录结构跟本地工程的不同，也就是编译过。
-![ioDirectory.png](../../assets/hexo/ioDirectory.png)
+{% asset_img ioDirectory.png ioDirectory %}
 为了便于维护，可以再建一个git远程仓库，执行git命令把工程推上去，用来管理工程源代码。
-![allRepository.png.png](../../assets/hexo/allRepository.png)
+{% asset_img allRepository.png allRepository %}
 至此，基于Hexo搭建的github.io个人博客 搭建完成，更多的配置和自定义操作，参考[Hexo官方文档](https://hexo.io/zh-cn/docs/)和[Markdown](https://www.runoob.com/markdown/md-tutorial.html)进行学习。
 
 
