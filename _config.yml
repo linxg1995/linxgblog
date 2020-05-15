@@ -94,6 +94,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: landscape
+# theme: gun
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -101,3 +102,16 @@ deploy:
   type: git
   repo: https://github.com/linxg1995/linxg1995.github.io.git
   branch: master
+
+# live2d
+live2d:
+  enable: true
+  pluginModelPath: assets/
+  model:
+    use: live2d-widget-model-koharu  #模板目录，在node_modules里
+  display:
+    position: right
+    width: 300
+    height: 600
+  mobile:
+    show: false  #是否在手机进行显示
