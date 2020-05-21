@@ -1,0 +1,31 @@
+<!--
+ * @Description: gun - 头部
+ * @Author: LXG
+ * @Date: 2020-05-21
+ * @LastEditTime: 2020-05-21
+-->
+<nav class="header-nav">
+    <div class="normal-container">
+        <ul class="nav-menu">
+            <li>
+                <a href="/">
+                    <h3><%- config.title %></h3>
+                </a>
+
+            </li>
+            <% for (m in theme.menu) { %>
+            <li>
+                <a href="<%- theme.menu[m] %>"><%- m %> </a>
+            </li>
+            <% } %>
+        </ul>
+        <ul class="nav-link">
+            <% for (l in theme.link) { %>
+            <li>
+                <a href="<%- theme.link[l] %>"><%- l %> </a>
+            </li>
+            <% } %>
+        </ul>
+    </div>
+</nav>
+<div class="header-banner"></div>

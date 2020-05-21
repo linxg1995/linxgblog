@@ -1,20 +1,22 @@
 <!--
- * @Description: 首页模板
+ * @Description: gun - 首页
  * @Author: LXG
- * @Date: 2020-05-09
- * @LastEditTime: 2020-05-09
- -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-</head>
-
-<body>
-    <h1>hexo-gun index</h1>
-</body>
-
-</html>
+ * @Date: 2020-05-21
+ * @LastEditTime: 2020-05-21
+-->
+<% if (is_home()) { %>
+<section class="wrap-index">
+    <div class="normal-container index-posts">
+        <% site.posts.forEach(post => { %>
+        <div class="posts-item">
+            <p>
+                <a href="<%- url_for(post.path) %>"><%- post.title %></a>
+            </p>
+            <p>
+                <span><%- date(post.date) %> </span>
+            </p>
+        </div>
+        <% }) %>
+    </div>
+</section>
+<% } %>
