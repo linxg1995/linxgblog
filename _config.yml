@@ -45,7 +45,8 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
+  # enable: true
   line_number: true
   auto_detect: false
   tab_replace: ''

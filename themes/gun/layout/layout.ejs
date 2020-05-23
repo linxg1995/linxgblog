@@ -2,7 +2,7 @@
  * @Description: gun - layout布局
  * @Author: LXG
  * @Date: 2020-05-09
- * @LastEditTime: 2020-05-21
+ * @LastEditTime: 2020-05-23
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -10,9 +10,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%- theme.title %> </title>
+    <title><%- config.title %> </title>
     <!-- 引入normalize -->
     <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- 引入highlight css -->
+    <%- css("lib/highlight/styles/atom-one-dark.css") %>
     <!-- 引入css -->
     <%- css("css/main.css") %>
 </head>
@@ -32,6 +34,12 @@
 
     <!-- 引入jQuery -->
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- 引入highlight js -->
+    <%- js("lib/highlight/highlight.pack.js") %>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+
     <!-- 引入js -->
     <%- js("js/main.js") %>
 </body>
