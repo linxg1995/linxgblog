@@ -1,0 +1,20 @@
+<!--
+ * @Description: gun - 归档
+ * @Author: LXG
+ * @Date: 2020-06-09
+ * @LastEditTime: 2020-06-09
+-->
+
+<section id="wrap-archive" class="normal-container">
+    <% let yearLabel %>
+    <% page.posts.forEach(post => { %>
+        <% if (post.date.year() !== yearLabel) { %>
+         <% yearLabel = post.date.year() %>
+         <p class="archive-yearLabel"><%- yearLabel %></p>
+        <% } %>
+    <div class="archive-post">
+        <a class="post-date" href="<%- url_for(post.path) %>"><%- date(post.date,'M月D日')%></a>
+        <a class="post-title" href="<%- url_for(post.path) %>"><%- post.title %></a>
+    </div>
+    <% }) %>
+</section>

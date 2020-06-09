@@ -2,7 +2,7 @@
  * @Description: gun - 头部
  * @Author: LXG
  * @Date: 2020-05-21
- * @LastEditTime: 2020-05-21
+ * @LastEditTime: 2020-06-09
 -->
 <nav class="header-nav">
     <div class="normal-container">
@@ -28,4 +28,13 @@
         </ul>
     </div>
 </nav>
-<div class="header-banner"></div>
+<% if (is_home()) { %>
+<div class="normal-container header-banner">
+    <div class="banner-mask">
+    </div>
+    <div class="banner-content">
+        <h1><%- config.subtitle %></h1>
+        <p><%- config.description %></p>
+    </div>
+</div>
+<% } %>

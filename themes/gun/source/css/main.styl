@@ -1,20 +1,29 @@
 body
     min-width: 1024px
     min-height: 100vh
+    margin: 0
+
+*
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
 
 #wrap-container
     position relative
+    width: 100%
     min-height: 100vh
     background-image: radial-gradient(
         ellipse farthest-corner at top,
         #fff,
-        #ccc
+        #eee
     )
 
 .normal-container
     width: 1024px
+    padding: 0 20px
     margin: 0 auto
 
 @import "header"
 @import "index"
+@import "archive"
 @import "post"
